@@ -44,7 +44,7 @@ NOTE: This option doesn't include automatic updates: you will need to sync your 
 If for some reason you want to enable debug output, set environment variable `NODE_ENV` to `development` prior to running
 `npm run build`. If you don't  know, how, you don't need debug output.
 
-Current debug output only includes performance metric of running a single tick of timer.
+Current debug output only includes performance metric of processing a single batch of `MutationObserver` entries.
 
 ==== Customize update URL
 
