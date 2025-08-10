@@ -6,7 +6,11 @@
   "scripts": {
     "build": "node build.js"
   },
-  "keywords": ["twitter", "userscript", "xcancel"],
+  "keywords": [
+    "twitter",
+    "userscript",
+    "xcancel"
+  ],
   "author": "Larissa Rosalene <lerarosalene@outlook.com>",
   "license": "ISC",
   "description": "Adds \"XC ↗\" links to tweets, transporting you to a wonderful world free of ID verification",

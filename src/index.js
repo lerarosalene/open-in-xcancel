@@ -35,7 +35,9 @@ function timer() {
   processLinks();
   const end = performance.now();
   if (ENABLE_DEBUG_OUTPUT) {
-    console.log(`[open-in-xcancel] timer took ${(end - start).toFixed(3)}ms to complete`);
+    console.log(
+      `[open-in-xcancel] timer took ${(end - start).toFixed(3)}ms to complete`
+    );
   }
 }
 
