@@ -17,16 +17,27 @@ Userscript that adds "XC ↗" links to tweets, transporting you to a wonderful w
 Install any userscript manager.
 
 * Chrome:
++
+--
   ** https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo[Tampermonkey]
+--
++
+NOTE: After installing any userscript manager extension in Chrome (or any other Chromium-based browser for that matter)
+for the first time you need to enable "Developer mode" on extensions settings page for related APIs to work.
+Forgetting to do this will make your Tampermonkey think that it’s running, when it fact it will not inject any
+userscripts
++
 * Firefox:
   ** https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/[Tampermonkey]
   ** https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/[Greasemonkey]
 
 === Install from this repository
 
-Follow this link: https://github.com/lerarosalene/open-in-xcancel/releases/latest/download/open-in-xcancel.user.js[]. Your userscript manager should trigger installation automatically.
+Follow this link: https://github.com/lerarosalene/open-in-xcancel/releases/latest/download/open-in-xcancel.user.js[].
+Your userscript manager should trigger installation automatically.
 
-NOTE: this option includes automatic updates. Disable them in your userscript manager if you don't want/don't trust them.
+NOTE: This option includes automatic updates. Disable them in your userscript manager if you don't want/don't trust
+them.
 
 === Build from scratch
 
@@ -35,14 +46,16 @@ NOTE: this option includes automatic updates. Disable them in your userscript ma
 3. Open terminal in cloned repository directory
 4. Run `npm ci` to install dependencies
 5. Run `npm run build` to build userscript
-6. Grab your userscript from `dist/open-in-xcancel.user.js`, copy its contents and paste into editor in your userscript manager
+6. Grab your userscript from `dist/open-in-xcancel.user.js`, copy its contents and paste into editor in your userscript
+manager
 
-NOTE: This option doesn't include automatic updates: you will need to sync your copy of repository manually and build new versions yourself.
+NOTE: This option doesn't include automatic updates: you will need to sync your copy of repository manually and build
+new versions yourself.
 
 ==== Enable debug output
 
-If for some reason you want to enable debug output, set environment variable `NODE_ENV` to `development` prior to running
-`npm run build`. If you don't  know, how, you don't need debug output.
+If for some reason you want to enable debug output, set environment variable `NODE_ENV` to `development` prior to
+running `npm run build`. If you don't  know how, you don't need debug output.
 
 Current debug output only includes performance metric of processing a single batch of `MutationObserver` entries.
 
@@ -50,3 +63,37 @@ Current debug output only includes performance metric of processing a single bat
 
 If you want to build userscript with `@updateURL` and `@downloadURL` metadata, set environment variable `UPDATE_URL` to
 desired location prior to running `npm run build`.
+
+== On smartphones
+
+Mobile Twitter app doesn't support running userscripts (as expected). Android browsers with userscript support include
+
+. Firefox Nightly - https://play.google.com/store/apps/details?id=org.mozilla.fenix[]
+.. Go to https://www.tampermonkey.net/index.php?browser=firefox[] and download "Tampermonkey BETA" .xpi
+.. Got to Settings → About Firefox
+.. Click Firefox logo several times until you get message about debug menu
++
+NOTE: In Firefox Nightly, debug menu disables itself after browser restarts. You need to redo this step any time you
+want to install extension from .xpi
++
+.. Go back to settings, you should see "Install extension from file"
+.. Use this button to load .xpi to Firefox Nightly
+. Edge Canary - https://play.google.com/store/apps/details?id=com.microsoft.emmx.canary[]
+.. Go to https://www.tampermonkey.net/index.php?browser=chrome[] and download .crx file via grey button on the
+   right of "Get from store"
++
+NOTE: Edge may fail to save .crx file into default downloads folder. If it happens and you can't locate downloaded file,
+just share this file with yourself via downloads menu (downloaded file entry in list of downloads → three-dot menu →
+Share).
++
+.. Go to Settings → About Microsoft Edge
+.. Click number after "Current version: " multiple times until you see message about developer options
+.. Enable "Developer mode" on extensions settings page (Burger menu → Extensions → Manage Extensions → Gear Icon in
+   top-right corner)
++
+NOTE: Forgetting to do this will make your Tampermonkey think that it's running, when it fact it will not inject any
+userscripts
++
+.. Go to Settings → Developer Options
+.. Find "Extension install by crx"
+.. Use this button to load .crx to Edge Canary
