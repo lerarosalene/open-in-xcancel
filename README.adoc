@@ -68,32 +68,37 @@ desired location prior to running `npm run build`.
 
 Mobile Twitter app doesn't support running userscripts (as expected). Android browsers with userscript support include
 
-. Firefox Nightly - https://play.google.com/store/apps/details?id=org.mozilla.fenix[]
-.. Go to https://www.tampermonkey.net/index.php?browser=firefox[] and download "Tampermonkey BETA" .xpi
-.. Got to Settings → About Firefox
-.. Click Firefox logo several times until you get message about debug menu
+=== Firefox Nightly
+
+. Install Firefox Nightly - https://play.google.com/store/apps/details?id=org.mozilla.fenix[]
+. Go to https://www.tampermonkey.net/index.php?browser=firefox[] and download "Tampermonkey BETA" .xpi
+. Got to Settings → About Firefox
+. Tap Firefox logo several times until you get message about debug menu
 +
 NOTE: In Firefox Nightly, debug menu disables itself after browser restarts. You need to redo this step any time you
 want to install extension from .xpi
 +
-.. Go back to settings, you should see "Install extension from file"
-.. Use this button to load .xpi to Firefox Nightly
-. Edge Canary - https://play.google.com/store/apps/details?id=com.microsoft.emmx.canary[]
-.. Go to https://www.tampermonkey.net/index.php?browser=chrome[] and download .crx file via grey button on the
+. Go back to settings, you should see "Install extension from file"
+. Use this button to load .xpi to Firefox Nightly
+
+=== Edge Canary
+
+. Install Edge Canary - https://play.google.com/store/apps/details?id=com.microsoft.emmx.canary[]
+. Go to https://www.tampermonkey.net/index.php?browser=chrome[] and download .crx file via grey button on the
    right of "Get from store"
 +
 NOTE: Edge may fail to save .crx file into default downloads folder. If it happens and you can't locate downloaded file,
 just share this file with yourself via downloads menu (downloaded file entry in list of downloads → three-dot menu →
 Share).
 +
-.. Go to Settings → About Microsoft Edge
-.. Click number after "Current version: " multiple times until you see message about developer options
-.. Enable "Developer mode" on extensions settings page (Burger menu → Extensions → Manage Extensions → Gear Icon in
+. Go to Settings → About Microsoft Edge
+. Tap number after "Current version: " multiple times until you see message about developer options
+. Enable "Developer mode" on extensions settings page (Burger menu → Extensions → Manage Extensions → Gear Icon in
    top-right corner)
 +
 NOTE: Forgetting to do this will make your Tampermonkey think that it's running, when it fact it will not inject any
 userscripts
 +
-.. Go to Settings → Developer Options
-.. Find "Extension install by crx"
-.. Use this button to load .crx to Edge Canary
+. Go to Settings → Developer Options
+. Find "Extension install by crx"
+. Use this button to load .crx to Edge Canary
