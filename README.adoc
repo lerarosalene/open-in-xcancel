@@ -66,7 +66,8 @@ desired location prior to running `npm run build`.
 
 == On smartphones
 
-Mobile Twitter app doesn't support running userscripts (as expected). Android browsers with userscript support include
+As expected, mobile Twitter app doesn't support running userscripts. You will need to use one of the following browsers
+with extension support (list isn't exhaustive, but these are the only two I am familiar with).
 
 === Firefox Nightly
 
