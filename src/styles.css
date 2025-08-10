@@ -1,0 +1,20 @@
+.xcancel-redirect-link {
+  margin-left: 8px;
+  line-height: 22px;
+  color: var(--xcancel-redirect-link-color) !important;
+  font-weight: var(--xcancel-redirect-link-font-weight);
+}
+
+.xcancel-redirect-link:hover {
+  text-decoration: underline;
+}
+
+:root {
+  --xcancel-redirect-link-color: #000;
+  --xcancel-redirect-link-font-weight: bold;
+}
+
+:root.xcancel-redirect-dark-theme {
+  --xcancel-redirect-link-color: #fff;
+  --xcancel-redirect-link-font-weight: normal;
+}

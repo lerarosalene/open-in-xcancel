@@ -1,0 +1,17 @@
+{
+  "private": true,
+  "name": "open-in-xcancel",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "keywords": ["twitter", "userscript", "xcancel"],
+  "author": "Larissa Rosalene <lerarosalene@outlook.com>",
+  "license": "ISC",
+  "description": "Adds \"XC ↗\" links to tweets, transporting you to a wonderful world free of ID verification",
+  "dependencies": {
+    "esbuild": "^0.25.8",
+    "userscript-header-format": "^1.1.0"
+  }
+}
